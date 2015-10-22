@@ -1,0 +1,25 @@
+---
+layout: cover
+---
+
+<div class="home clearfix col-12 sm-8">
+  
+  <p class="h1 border-bottom border-white">posts</p>
+
+  <ul class="list-reset">
+    {% for post in site.posts %}
+      <li class="py2">
+        
+        <p class="h2 m0 bold">
+          <a class="aqua" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </p>
+        <p class="h4 italic">{{ post.date | date: "%b %-d, %Y" }}</p>
+        
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
+
+<!--  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+
+</div>

@@ -1,0 +1,21 @@
+---
+layout: mytheme
+---
+<div class="py3 mt4">
+<div class="bg-cover bg-center flex flex-center bg-aqua px4"
+        style="background-image: url(/images/{{ page.bg }});min-height:30vh">
+  <p class="h1 bold italic">{{ page.song }}</p>
+</div>
+<div class="post sm-col-9 px4">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>
+</div>
