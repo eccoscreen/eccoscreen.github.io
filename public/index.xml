@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ecco screen</title>
+    <link>/</link>
+    <description>Recent content on ecco screen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jun 2017 21:51:13 -0700</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hello world</title>
+      <link>/about/</link>
+      <pubDate>Sat, 24 Jun 2017 21:51:13 -0700</pubDate>
+      
+      <guid>/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
