@@ -1,7 +1,7 @@
 +++
-medium = ""
 year = ""
-draft = true
+type = ""
+genre = ""
+medium = ""
+images = []
 +++
-
-## Description

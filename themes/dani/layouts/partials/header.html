@@ -29,7 +29,7 @@
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}uploads/favicon.png" />
 
   <!-- DOCUMENT TITLE -->
-  <title>{{ .Site.Title }}</title>
+  <title>{{ .Site.Title }} - {{ .Title }} </title>
 
 </head>
 
@@ -56,13 +56,13 @@
       <div class="header-inner clearfix">
 
         <!-- LOGO -->
-        <div id="logo">
-          <a href="{{ .Site.BaseURL }}"><h3>{{ .Site.Params.Author }}</strong></h3>
-<!--
+        <div id="logo" class="text-logo">
+          <a href="{{ .Site.BaseURL }}" class="text-logo">{{ .Site.Params.Author }}</a>
+          <!--
                 	<img id="dark-logo" src="files/uploads/logo-dani-dark.png" srcset="files/uploads/logo-dani-architecture-dark.png 1x, files/uploads/logo-dani-architecture-dark@2x.png 2x" alt="Logo Dark">
                 	<img id="light-logo" src="files/uploads/logo-dani-light.png" srcset="files/uploads/logo-dani-architecture-light.png 1x, files/uploads/logo-dani-architecture-light@2x.png 2x" alt="Logo light">
 -->
-                </a>
+
         </div>
 
         <!-- MAIN NAVIGATION -->
@@ -75,8 +75,7 @@
           <div id="menu-inner">
             <nav id="main-nav">
               <ul class="underline">
-                <li><a href="{{ .Site.BaseURL }}"><span>Home</span></a></li>
-                <li><a href="{{ .Site.BaseURL }}work"><span>Work</span></a></li>
+                <li><a href="{{ .Site.BaseURL }}/work"><span>Work</span></a></li>
                 <li><a href="about-architecture.html"><span>About</span></a></li>
                 <li><a href="contact-architecture.html"><span>Contact</span></a></li>
               </ul>
