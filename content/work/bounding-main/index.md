@@ -4,6 +4,6 @@ medium = ""
 title = "bounding main"
 genre = "interactive installation"
 year = "2017"
-images = "image.jpeg"
+thumbnail = "image.jpeg"
 +++
 

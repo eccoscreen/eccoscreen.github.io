@@ -5,7 +5,7 @@ medium = ""
 genre = "interactive installation"
 title = "strands"
 year = "2016"
-images = "strands-2.jpg"
+thumbnail = "strands-2.jpg"
 
 +++
 
