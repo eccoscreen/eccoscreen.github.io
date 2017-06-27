@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <!-- HERO -->
-<section id="hero" class="hero-full hero-animation parallax-section text-light" data-parallax-image="{{ .Params.images }}">
+<section id="hero" class="hero-full hero-animation parallax-section text-light" data-parallax-image="{{ .Permalink }}{{ .Params.images }}">
 
   <div id="page-title" class="wrapper title-bottom">
     <h5 class="title-alt text-animation">{{ .Params.genre }}</h5>
@@ -25,7 +25,8 @@
         </div>
         <div class="column one-half last-col">
           <h5 class="title-alt">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Even the all-powerful Pointing has no control about the blind texts it is an almost.</h5>
-          <p>Branding, Identity, Web Design, UX / UI</p>
+          
+          <p><h4>Medium: </h4>{{ .Params.medium }}</p>
         </div>
       </div>
     </div>
@@ -35,11 +36,11 @@
 
     <div class="column-section col-sticky clearfix">
       <div class="column one-third">
-        <img class="lazy" data-src="{{ .Site.BaseURL }}/uploads/600x400-light.jpg" width="600" height="400" alt="SEO" />
-        <img class="lazy" data-src="{{ .Site.BaseURL }}/uploads/600x400-light.jpg" width="600" height="400" alt="SEO" />
+        <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/600x400-light.jpg" width="600" height="400" alt="SEO" />
+        <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/600x400-light.jpg" width="600" height="400" alt="SEO" />
       </div>
       <div class="column two-third last-col">
-        <img class="lazy" data-src="{{ .Site.BaseURL }}/uploads/1200x800-light.jpg" width="1200" height="800" alt="SEO" />
+        <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1200x800-light.jpg" width="1200" height="800" alt="SEO" />
       </div>
     </div>
 
@@ -63,7 +64,7 @@
     <!-- END .wrapper -->
 
     <div class="spacer-big"></div>
-    <img class="lazy" data-src="{{ .Site.BaseURL }}/uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+    <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
     <div class="spacer-big"></div>
 
     <div class="wrapper-small">
@@ -93,21 +94,34 @@
     <!-- END .wrapper-small -->
 
     <div class="spacer-big"></div>
-    <img class="lazy" data-src="{{ .Site.BaseURL }}/uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+    <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
 
   </div>
   <!-- END #portfolio-single -->
 
-  <div class="wrapper">
-    <div id="single-pagination">
-      <ul class="pagination">
-        <li class="prev"><a href="portfolio-single-right-fullwidth.html">Previous Project<span class="icon"></span></a></li>
-        <li class="back"><a href="index.html"><span class="icon"></span></a></li>
-        <li class="next"><a href="portfolio-single-left-spaced.html">Next Project<span class="icon"></span></a></li>
-      </ul>
-    </div>
+  <div id="single-pagination image">
+    <ul class="image-pagination">
+      <li class="do-anim">
+        <a href="{{ .PrevInSection.Permalink }}" class="thumb-hover text-light">
+          <img src="{{ .Site.BaseURL }}uploads/1100x650-dark.jpg" alt="SEO">
+          <div class="overlay-caption bottom align-left">
+            <span class="prev caption-sub">Previous Project<span class="icon"></span></span>
+            <h3 class="caption-name portfolio-name">{{ .PrevInSection.Title }}</h3>
+          </div>
+        </a>
+      </li>
+      <li class="do-anim" data-delay="300">
+        <a href="{{ .NextInSection.Permalink }}" class="thumb-hover text-light">
+          <img src="{{ .Site.BaseURL }}uploads/1100x650-dark.jpg" alt="SEO">
+          <div class="overlay-caption bottom align-right">
+            <span class="next caption-sub">Next Project<span class="icon"></span></span>
+            <h3 class="caption-name portfolio-name">{{ .NextInSection.Title }}</h3>
+          </div>
+        </a>
+      </li>
+    </ul>
   </div>
-  <!-- END .wrapper -->
+  <!-- END .single image pagination -->
 
 </section>
 <!-- PAGEBODY end -->
