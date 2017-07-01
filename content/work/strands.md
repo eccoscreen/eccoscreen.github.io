@@ -6,6 +6,6 @@ medium = "custom software, projector, depth camera"
 genre = "interactive installation"
 title = "strands"
 year = "2016"
-thumbnail = "strands-2.jpg"
-images = "strands-5.jpg"
+thumbnail = "strands-5.jpg"
+images = "strands-2.jpg"
 +++
