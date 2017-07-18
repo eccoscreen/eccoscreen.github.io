@@ -388,11 +388,11 @@ jQuery(window).load(function() {
 			sliderLayout:"fullscreen",
 			fullScreenAutoWidth:"on",
 			fullScreenOffsetContainer:"#pseudo-header",
-			delay:9000,
+			delay:2000,
 			disableProgressBar:'on',
 			navigation: {
 				arrows:{ 
-					enable:true, 
+					enable:false, 
 					style:"dani-nav",
 					left:{ h_offset: 25 },
 					right:{  h_offset: 25 } 
