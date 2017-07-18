@@ -87,13 +87,6 @@ header #logo .text-logo {
 	text-transform: lowercase;
 	}
 	
-header.menu-open nav#main-nav > ul > li > a {
-	font-weight: 300;
-	font-size: 16px;
-	text-transform: lowercase;
-	letter-spacing: 0.02em;
-	}
-	
 .portfolio-category {
 	font-weight: 300; 
 	font-size: 18px;
@@ -114,3 +107,116 @@ header.menu-open nav#main-nav > ul > li > a {
 	font-size: 18px;
 	line-height: 24px;
 	}
+
+/*---------------------------------------------- 
+
+18. ANIMATIONS (portfolio, hero, text, ...)
+
+------------------------------------------------*/
+
+/* portfolio + hero animation */
+.portfolio-container.portfolio-animation .portfolio-item .item-inner, #hero.hero-animation {
+	-webkit-transform: translateY(40px);
+  	-moz-transform: translateY(40px);
+  	-ms-transform: translateY(40px);
+  	-o-transform: translateY(40px);
+  	transform: translateY(40px);
+	-webkit-transition: transform 1s cubic-bezier(0.600, 0.000, 0.200, 1.000);
+	   -moz-transition: transform 1s cubic-bezier(0.600, 0.000, 0.200, 1.000);
+		 -o-transition: transform 1s cubic-bezier(0.600, 0.000, 0.200, 1.000);
+			transition: transform 1s cubic-bezier(0.600, 0.000, 0.200, 1.000); 
+	-webkit-transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+	   -moz-transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+		 -o-transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+			transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000); 
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+	.isotope-grid.portfolio-container.portfolio-animation .portfolio-item .item-inner { transition-duration: 0.8s; }
+	.portfolio-container.portfolio-animation .portfolio-item.animated .item-inner, #hero.hero-animation.animated {
+	transition: transform 1s ease-in-out, opacity .8s ease-in-out;
+	-webkit-transform: translateY(0%);
+  	-moz-transform: translateY(0%);
+  	-ms-transform: translateY(0%);
+  	-o-transform: translateY(0%);
+  	transform: translateY(0%);
+  	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+
+
+
+header #logo {
+	padding: 50px 75px;
+}
+
+/*---------------------------------------------- 
+
+5. 	MENU
+
+------------------------------------------------*/	
+
+/*#menu-inner {
+	padding: 25px 50px;
+}*/
+
+/* Open Menu (menu-open) */
+@media only screen and (min-width:769px){
+	header.menu-open #menu-inner { 
+		background: none; 
+		width: auto;  
+		position: relative; 
+		top:auto; 
+		right: auto; 
+		float: right; 
+		z-index: 15; 
+		overflow: visible; 
+		padding: 25px;
+		margin-right: 50px; 
+		border: none;  
+	}
+	header.menu-open nav#main-nav > ul > li > a {
+		font-weight: 300;
+		font-size: 16px;
+		text-transform: lowercase;
+		letter-spacing: 0.02em;
+	}
+}
+
+/*---------------------------------------------- 
+
+18. ANIMATIONS (portfolio, hero, text, ...)
+
+------------------------------------------------*/
+
+/* text animation */		
+.text-animation .line-animation {
+	display: block;
+	overflow: hidden;
+	}
+	
+.text-animation .line-animation > span {
+	-webkit-transition: transform 0.8s cubic-bezier(.56,.02,.59,1.03);
+	   -moz-transition: transform 0.8s cubic-bezier(.56,.02,.59,1.03);
+		 -o-transition: transform 0.8s cubic-bezier(.56,.02,.59,1.03);
+			transition: transform 0.8s cubic-bezier(.56,.02,.59,1.03);
+	-webkit-transition-timing-function: cubic-bezier(0.56,.02,.59,1.03);
+	   -moz-transition-timing-function: cubic-bezier(.56,.02,.59,1.03);
+		 -o-transition-timing-function: cubic-bezier(.56,.02,.59,1.03);
+			transition-timing-function: cubic-bezier(.56,.02,.59,1.03);		
+}
+
+/* general animation */
+[class*='do-anim'] {
+	transition: all 0.9s ease;
+	opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-webkit-transform: translateY(20px);
+  	-moz-transform: translateY(20px);
+  	-ms-transform: translateY(20px);
+  	-o-transform: translateY(20px);
+  	transform: translateY(20px);
+}

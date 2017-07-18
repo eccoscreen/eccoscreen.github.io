@@ -1,0 +1,133 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<!-- PAGEBODY -->
+<section id="page-body">
+  <div class="spacer-big"></div>
+
+  <div class="wrapper-big">
+
+    <ul id="portfolio-filter" class="filter" data-related-grid="portfolio-grid">
+      <li class="active"><a href="#" data-filter="*">Show All</a></li>
+      
+<!--
+      {{- range .Pages }}
+        <li><a data-filter=".{{ .Params.genre }}" data-slug="{{ .Params.genre }}" href="#" title="{{ .Params.genre }}">{{ .Params.genre }}</a></li>
+      {{- end }}
+-->
+      
+      <li><a data-filter=".residential" data-slug="residential" href="#" title="Residential">Residential</a></li>
+      <li><a data-filter=".public" data-slug="public" href="#" title="Public">Public</a></li>
+      <li><a data-filter=".misc" data-slug="misc" href="#" title="Misc">Misc</a></li>
+    </ul>
+
+    <div id="portfolio-grid" class="isotope-grid portfolio-container style-column-2 isotope-spaced clearfix fitrows">
+      
+      {{- range .Pages }}
+      <div class="isotope-item portfolio-item residential">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}" alt="SEO">
+<!--            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">-->
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">{{ .Params.genre }}</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">{{ .Title }}</a></h4>
+          </div>
+        </div>
+      </div>
+      {{- end }}
+      
+      <div class="isotope-item portfolio-item residential">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Residential</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">Duan Street Loft</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="isotope-item portfolio-item public">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Public Building</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">River Side Health Center</a></h4>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="isotope-item portfolio-item public">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Public Building</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">Concrete Love</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="isotope-item portfolio-item residential">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Residential</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">Empty Florida</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="isotope-item portfolio-item public">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Public Building</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">The New Apple Building</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="isotope-item portfolio-item misc">
+        <div class="portfolio-item-inner item-inner">
+          <a href="portfolio-single-architecture.html" class="thumb-hover overlay-effect text-light">
+            <img src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" alt="SEO">
+            <span class="thumb-arrow"></span>
+          </a>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Misc</span>
+            <h4 class="portfolio-name"><a href="portfolio-single-architecture.html">Experiments</a></h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END .isotope-grid -->
+
+  </div>
+  <!-- END .wrapper-big -->
+
+  <div class="spacer-big"></div>
+
+</section>
+<!-- PAGEBODY -->
+
+{{ partial "footer.html" . }}

@@ -1,3 +1,4 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
 <!-- HERO  -->
@@ -45,6 +46,22 @@
     <p><img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO"></p>
 
     <div class="spacer-big"></div>
+    
+    <div class="column-section clearfix">
+      <div class="column two-fourth">
+        <h3>Exhibitions</h3>
+      </div>
+      <div class="column one-fourth">
+        <ul class="no-list-style">
+          <li>show one</li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <div class="spacer-big"></div>
+    <hr>
+    <div class="spacer-big"></div>
 
     <div class="column-section clearfix">
       <div class="column two-fourth">
@@ -79,11 +96,22 @@
       </div>
       <div class="column one-fourth">
         <ul class="no-list-style">
+          {{ range $.Site.Data.about }}
+            <ul>
+            {{ range .clients }}
+              <li>{{ . }}</li>
+            {{ end }}
+            </ul>
+          {{ end }}
+          {{ index .Site.Data "about.toml" }}
+<!--
           <li>Englehart</li>
           <li>The Boutique</li>
           <li>Fairhaven Homes</li>
           <li>Glennville</li>
           <li>JG King Projects</li>
+-->
+          
         </ul>
       </div>
       <div class="column one-fourth last-col">
@@ -98,11 +126,14 @@
     </div>
 
     <div class="spacer-big"></div>
-
+    <hr>
+    {{ partial "clients.html" . }}
+    
   </div>
   <!-- END .wrapper-big -->
 </section>
 <!-- PAGEBODY -->
+
 
 
 {{ partial "footer.html" . }}

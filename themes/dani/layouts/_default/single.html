@@ -1,11 +1,12 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
 <!-- HERO -->
-<section id="hero" class="hero-full hero-animation parallax-section text-light" data-parallax-image="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}" data-speed="0.6" style="height: auto; position: relative; z-index: 2;">
+<section id="hero" class="hero-full parallax-section text-light" data-parallax-image="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}" data-speed="0.6" style="height: auto; position: relative; z-index: 2;">
 
-  <div id="page-title" class="wrapper title-bottom">
-    <h5 class="title-alt text-animation">{{ .Params.genre }}</h5>
-    <h1 class="text-animation"><strong>{{ .Title }}</strong></h1>
+  <div id="page-title" class="wrapper">
+<!--    <h5 class="title-alt text-animation">{{ .Params.genre }}</h5>-->
+    <h1 class="do-anim"><strong>{{ .Title }}</strong></h1>
   </div>
 
 </section>
@@ -99,6 +100,7 @@
   </div>
   <!-- END #portfolio-single -->
 
+<!--
   <div id="single-pagination image">
     <ul class="image-pagination">
       <li class="do-anim">
@@ -121,6 +123,7 @@
       </li>
     </ul>
   </div>
+-->
   <!-- END .single image pagination -->
 
 </section>
