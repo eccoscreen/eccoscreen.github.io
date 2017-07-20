@@ -1,0 +1,75 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+    
+    <!-- HERO  -->
+    <section id="hero" class="hero-full text-light parallax-section" data-parallax-image="{{ .Site.BaseURL }}images/{{ .File.TranslationBaseName }}/{{ .Params.thumbnail }}">
+        <div id="page-title" class="post-title">
+        	<h5>{{ .Params.genre }}</h5>
+            <h1>{{ .Title }}</h1>
+        </div> <!-- END #page-title -->
+    </section>
+    <!-- HERO -->
+	
+	<!-- PAGEBODY -->
+	<section id="page-body">
+    	<div class="spacer-big"></div>
+        
+        <div class="wrapper-big">
+        
+        	<div class="column-section clearfix">
+                <div class="column one-half empty-content"></div>
+                <div class="column one-half last-col">
+                	<h4>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</h4>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                    
+                    <div class="spacer-medium"></div>
+                    <h4 class="title-alt">Share</h4>
+                    <ul class="socialmedia-widget text-style">
+                        <li class="facebook"><a href="#">Facebook</a></li>
+                        <li class="twitter"><a href="#">Twitter</a></li>
+                        <li class="behance"><a href="#">Behance</a></li>
+                        <li class="pinterest"><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+    		<div class="spacer-big"></div>
+        	
+        	<div id="gallery-grid" class="isotope-grid gallery-container style-column-2 isotope-spaced clearfix">
+            
+            	<div class="isotope-item sr-gallery-item do-anim">
+					<img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" />
+                </div>
+                
+                <div class="isotope-item sr-gallery-item do-anim">
+					<img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" />
+                </div>
+                
+                <div class="isotope-item sr-gallery-item double-width do-anim">
+					<img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+                </div>
+                
+                <div class="isotope-item sr-gallery-item do-anim">
+					<img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" />
+                </div>
+                
+                <div class="isotope-item sr-gallery-item do-anim">
+					<img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" />
+                </div>
+                
+                <div class="isotope-item sr-gallery-item double-width do-anim">
+					<img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+                </div>
+                
+          	</div>	
+            
+        </div> <!-- END .wrapper-big -->
+        
+    	<div class="spacer-big"></div>
+        
+        {{ partial "pagination.html" . }}
+        
+ 	</section>
+	<!-- PAGEBODY -->
+    
+  {{ partial "footer.html" . }}

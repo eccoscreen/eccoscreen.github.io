@@ -5,5 +5,6 @@ title = "bounding main"
 genre = "interactive installation"
 year = "2017"
 thumbnail = "image.jpeg"
+layout = "single-architectural"
 +++
 

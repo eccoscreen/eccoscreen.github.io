@@ -58,8 +58,8 @@ body{
 
 body {
 	font-weight: 300;
-	font-size: 18px; 
-	line-height: 28px;
+	font-size: 16px; 
+	line-height: 25px;
 	color: #708BA9;
 	}
 	strong, b, dt { font-weight: 400; }
@@ -208,6 +208,19 @@ header #logo {
 
 #revolutionslider1 {
 	background-color: #000000;
+}
+
+/*---------------------------------------------- 
+
+13. PAGINATION
+
+------------------------------------------------*/	
+
+.image-pagination li span.next, .image-pagination li span.prev { 
+	font-family: 'Karla'; 
+	text-transform: lowercase; 
+	letter-spacing: 0.045em;
+	font-size: 16px;
 }
 
 /*---------------------------------------------- 
