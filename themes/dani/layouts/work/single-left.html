@@ -17,13 +17,15 @@
       <p><a href="http://www.apofenia.co" class="sr-button-with-arrow" target="_blank"><strong>Visit Site</strong></a></p>
 
       <h5 class="title-alt"><strong>Role</strong></h5>
-      <p>{{- .Params.medium -}} {{ .Site.Params.social }}</p>
+<!--
+      <p>{{- .Params.medium -}}</p>
       <p>{{ .Site.Menus }}</p>
+-->
 
       <h5 class="title-alt"><strong>Share</strong></h5>
       <ul class="socialmedia-widget">
         <li class="facebook">
-          <a href="{{ .Site.params.social }}"></a>
+          <a href="#"></a>
         </li>
         <li class="twitter">
           <a href="#"></a>
@@ -57,6 +59,4 @@
 </section>
 <!-- PAGEBODY -->
 
-<script type="text/javascript" src="{{ .Site.BaseURL }}/js/jquery.sticky-kit.min.js"></script>
-
-{{ partial "header.html" . }}
+{{ partial "footer.html" . }}

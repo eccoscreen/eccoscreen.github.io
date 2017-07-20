@@ -55,6 +55,9 @@
 <script type="text/javascript" src="{{ .Site.BaseURL }}js/script.js"></script>
 <script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery.backgroundparallax.min.js"></script>
 
+{{ if eq .Page.Layout "single-left" }}
+<script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery.sticky-kit.min.js"></script>
+{{ end }}
 
 <!-- SCRIPTS -->
 

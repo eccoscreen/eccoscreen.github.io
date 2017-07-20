@@ -14,7 +14,7 @@ publishdir          = "docs"
 [permalinks]
 fixed = ":title/"
 blog  = "blog/:slug/"
-work =  ":title"
+work =  ":slug"
 
 [params]
 author        = "ecco screen" # Full name shows on blog post pages
