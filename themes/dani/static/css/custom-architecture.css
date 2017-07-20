@@ -89,7 +89,7 @@ header #logo .text-logo {
 	
 .portfolio-category {
 	font-weight: 300; 
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 24px;
 	text-transform: none; 
 	letter-spacing: 0em;
@@ -162,8 +162,7 @@ header #logo {
 
 #footer .footer-bottom {
 	border-top: none;
-	padding: 25px 0;
-	}
+}
 
 /*---------------------------------------------- 
 
@@ -196,6 +195,19 @@ header #logo {
 		text-transform: lowercase;
 		letter-spacing: 0.02em;
 	}
+}
+
+/*---------------------------------------------- 
+
+8. HERO / PAGETITLE
+
+------------------------------------------------*/
+/*#hero {
+	background-color: #000000;
+}*/
+
+#revolutionslider1 {
+	background-color: #000000;
 }
 
 /*---------------------------------------------- 

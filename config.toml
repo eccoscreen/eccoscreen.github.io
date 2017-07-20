@@ -60,13 +60,13 @@ project3title   = "Project 3"
 # Find icon names here: http://fontawesome.io/cheatsheet/
 
 [[params.social]]
-url = "https://twitter.com/"
+url = "https://twitter.com/eccoscreen"
 icon = "twitter"
 
 [[params.social]]
-url = "https://facebook.com/"
+url = "https://facebook.com/eccoscreen"
 icon = "facebook"
 
 [[params.social]]
-url = "https://linkedin.com/"
-icon = "linkedin"
+url = "https://instagram.com/eccoscreen"
+icon = "instagram"

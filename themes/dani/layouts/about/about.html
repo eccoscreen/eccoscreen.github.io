@@ -48,15 +48,33 @@
     <div class="spacer-big"></div>
     
     <div class="column-section clearfix">
-      <div class="column two-fourth">
-        <h3>Exhibitions</h3>
-      </div>
-      <div class="column one-fourth">
+      <h2>Exhibitions</h2>
+      <h3>2017</h3>
+      <br>
+      <div class="column one-third">
         <ul class="no-list-style">
-          <li>show one</li>
-
+          <li>
+          <h4>Tunnel Vision</h4>
+            <small>
+              July 1, 2017
+              <br>
+              Dupont Underground. Washington, DC
+            </small>
+          </li>
         </ul>
       </div>
+      <div class="column one-third">
+      <ul class="no-list-style">
+        <li>
+        <h4>Dimensions</h4>
+          <small>
+            June 3, 2017
+            <br>
+            Mirus Gallery. San Francisco, CA. US
+          </small>
+        </li>
+      </ul>
+    </div>
     </div>
     
     <div class="spacer-big"></div>
@@ -103,15 +121,7 @@
             {{ end }}
             </ul>
           {{ end }}
-          {{ index .Site.Data "about.toml" }}
-<!--
-          <li>Englehart</li>
-          <li>The Boutique</li>
-          <li>Fairhaven Homes</li>
-          <li>Glennville</li>
-          <li>JG King Projects</li>
--->
-          
+          {{ index .Site.Data "about" }}
         </ul>
       </div>
       <div class="column one-fourth last-col">
@@ -126,14 +136,8 @@
     </div>
 
     <div class="spacer-big"></div>
-    <hr>
-    {{ partial "clients.html" . }}
-    
   </div>
   <!-- END .wrapper-big -->
 </section>
 <!-- PAGEBODY -->
-
-
-
 {{ partial "footer.html" . }}
