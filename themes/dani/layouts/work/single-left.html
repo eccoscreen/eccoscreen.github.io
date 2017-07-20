@@ -1,0 +1,62 @@
+{{ partial "head.html" . }} 
+{{ partial "header.html" . }}
+
+<!-- PAGEBODY -->
+<section id="page-body">
+
+  <div id="portfolio-single" class="single-portfolio">
+
+    <div class="single-content col-sticky right-float">
+      <div class="single-title">
+        <h1><strong>{{- .Title -}}</strong></h1>
+        <h5 class="title-alt">{{ .Params.genre }}</h5>
+      </div>
+
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so.</p>
+      <p><a href="http://www.apofenia.co" class="sr-button-with-arrow" target="_blank"><strong>Visit Site</strong></a></p>
+
+      <h5 class="title-alt"><strong>Role</strong></h5>
+      <p>{{- .Params.medium -}} {{ .Site.Params.social }}</p>
+      <p>{{ .Site.Menus }}</p>
+
+      <h5 class="title-alt"><strong>Share</strong></h5>
+      <ul class="socialmedia-widget">
+        <li class="facebook">
+          <a href="{{ .Site.params.social }}"></a>
+        </li>
+        <li class="twitter">
+          <a href="#"></a>
+        </li>
+        <li class="behance">
+          <a href="#"></a>
+        </li>
+        <li class="pinterest">
+          <a href="#"></a>
+        </li>
+      </ul>
+    </div>
+    <!-- END .single-content -->
+
+    <div class="single-media left-float">
+      <ul class="sr-vertical-gallery">
+        <li class="do-anim"><img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" /></li>
+        <li class="do-anim"><img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" /></li>
+        <li class="do-anim"><img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" /></li>
+        <li class="do-anim"><img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" /></li>
+        <li class="do-anim"><img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1100x650-light.jpg" width="1100" height="650" alt="SEO" /></li>
+      </ul>
+    </div>
+    <!-- END .single-media -->
+
+  </div>
+  <!-- END #portfolio-single -->
+
+  {{ partial "pagination.html" . }}
+
+</section>
+<!-- PAGEBODY -->
+
+<script type="text/javascript" src="{{ .Site.BaseURL }}/js/jquery.sticky-kit.min.js"></script>
+
+{{ partial "header.html" . }}

@@ -12,7 +12,7 @@
     <div class="smartscroll-item portfolio-item portfolio-smart-item">
       <div class="portfolio-item-inner item-inner">
         <a href="{{ .Permalink }}" class="thumb-hover text-light">
-          <img src="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}" alt="SEO">
+          <img src="{{ .Site.BaseURL }}images/{{ .File.TranslationBaseName }}/{{ .Params.thumbnail }}" alt="SEO">
           <div class="overlay-caption top align-left">
             <h3 class="caption-name portfolio-name do-anim"><strong>{{ .Title }}</strong></h3>
             <span class="caption-sub portfolio-category do-anim">{{ .Params.genre }}</span>

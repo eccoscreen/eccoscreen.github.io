@@ -2,10 +2,10 @@
 {{ partial "header.html" . }}
 
 <!-- HERO -->
-<section id="hero" class="hero-big parallax-section text-light" data-parallax-image="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}">
+<section id="hero" class="hero-big parallax-section text-light" data-parallax-image="{{ .Site.BaseURL }}images/{{ .File.TranslationBaseName }}/{{ .Params.thumbnail }}">
   <div id="page-title" class="wrapper post-title">
 <!--    <h5 class="title-alt text-animation">{{ .Params.genre }}</h5>-->
-    <h1 class="do-anim"><strong>{{ .Title }}</strong></h1>
+    <h1 class="do-anim"><strong>{{- .Title -}}</strong></h1>
   </div>
 </section>
 <!-- HERO end -->
@@ -23,7 +23,7 @@
         </div>
         <div class="column one-half last-col">
           <h5 class="title-alt">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Even the all-powerful Pointing has no control about the blind texts it is an almost.</h5>
-          <p>{{ .Params.medium }}</p>
+          <p>{{- .Params.medium -}}</p>
         </div>
       </div>
     </div>
@@ -32,11 +32,11 @@
     <div class="spacer-big"></div>
 
     <div class="column-section col-sticky clearfix">
-      <div class="column one-third">
+      <div class="column one-third do-anim" >
         <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/600x400-light.jpg" width="600" height="400" alt="SEO" />
         <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/600x400-light.jpg" width="600" height="400" alt="SEO" />
       </div>
-      <div class="column two-third last-col">
+      <div class="column two-third last-col do-anim">
         <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1200x800-light.jpg" width="1200" height="800" alt="SEO" />
       </div>
     </div>
@@ -61,7 +61,9 @@
     <!-- END .wrapper -->
 
     <div class="spacer-big"></div>
-    <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+    <div class="do-anim">
+      <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+    </div>
     <div class="spacer-big"></div>
 
     <div class="wrapper-small">
@@ -91,41 +93,16 @@
     <!-- END .wrapper-small -->
 
     <div class="spacer-big"></div>
-    <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+    <div class="do-anim">
+      <img class="lazy" data-src="{{ .Site.BaseURL }}uploads/1680x1100-light.jpg" width="1680" height="1100" alt="SEO" />
+    </div>
 
   </div>
   <!-- END #portfolio-single -->
 
-  <div id="single-pagination image">
-    <ul class="image-pagination">
-      {{ if .PrevInSection }}
-      <li class="do-anim">
-        <a href="{{ .PrevInSection.Permalink }}" class="thumb-hover text-light">
-          <img src="{{ .Site.BaseURL }}uploads/1100x650-dark.jpg" alt="SEO">
-          <div class="overlay-caption bottom align-left">
-            <span class="prev caption-sub">Previous Project<span class="icon"></span></span>
-            <h3 class="caption-name portfolio-name">{{ .PrevInSection.Title }}</h3>
-          </div>
-        </a>
-      </li>
-      {{ end }}
-      {{ if .NextInSection }}
-      <li class="do-anim" data-delay="300">
-        <a href="{{ .NextInSection.Permalink }}" class="thumb-hover text-light">
-          <img src="{{ .Site.BaseURL }}uploads/1100x650-dark.jpg" alt="SEO">
-          <div class="overlay-caption bottom align-right">
-            <span class="next caption-sub">Next Project<span class="icon"></span></span>
-            <h3 class="caption-name portfolio-name">{{ .NextInSection.Title }}</h3>
-          </div>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  <!-- END .single image pagination -->
+  {{ partial "pagination.html" . }}
 
 </section>
 <!-- PAGEBODY end -->
-
 
 {{ partial "footer.html" . }}

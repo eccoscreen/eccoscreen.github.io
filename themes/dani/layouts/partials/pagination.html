@@ -1,0 +1,37 @@
+<div id="single-pagination image">
+  <ul class="image-pagination">
+    
+    {{ with .PrevInSection }}
+    <li class="do-anim">
+      <a href="{{ .Permalink }}" class="thumb-hover text-light">
+        {{ if .Params.thumbnail }}
+          <img src="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}" alt="SEO">
+        {{ else }}
+          <img src="{{ .Site.BaseURL }}uploads/1100x650-dark.jpg" alt="SEO">
+        {{ end }}
+        <div class="overlay-caption bottom align-left">
+          <span class="prev caption-sub">Previous Project<span class="icon"></span></span>
+          <h3 class="caption-name portfolio-name">{{ .Title }}</h3>
+        </div>
+      </a>
+    </li>
+    {{ end }}
+    
+    {{ with .NextInSection }}
+    <li class="do-anim" data-delay="300">
+      <a href="{{ .Permalink }}" class="thumb-hover text-light">
+        {{ if .Params.thumbnail }}
+          <img src="{{ .Site.BaseURL }}images/{{ .Title }}/{{ .Params.thumbnail }}" alt="SEO">
+        {{ else }}
+          <img src="{{ .Site.BaseURL }}uploads/1100x650-dark.jpg" alt="SEO">
+        {{ end }}
+        <div class="overlay-caption bottom align-right">
+          <span class="next caption-sub">Next Project<span class="icon"></span></span>
+          <h3 class="caption-name portfolio-name">{{ .Title }}</h3>
+        </div>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+<!-- END .single image pagination -->

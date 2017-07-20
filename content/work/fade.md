@@ -8,6 +8,7 @@ thumbnail = "faded-14.jpg"
 title = "fade"
 type = ""
 year = "2017"
+layout = "single-left"
 
 +++
 

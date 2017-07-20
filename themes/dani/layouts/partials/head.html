@@ -28,7 +28,14 @@
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}uploads/favicon.png" />
 
   <!-- DOCUMENT TITLE -->
-  <title>{{ .Site.Title }} - {{ .Title }} </title>
+  
+  <title>
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Site.Title }} - {{ .Title }} 
+    {{ end }}
+  </title>
 
 </head>
 
