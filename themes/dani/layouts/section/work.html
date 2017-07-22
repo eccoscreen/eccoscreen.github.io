@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<!-- PAGEBODY -->
+<section id="page-body">
+  <div class="spacer-big"></div>
+  
+  <div id="smartscroll" class="smartscroll-grid portfolio-container smartscroll-spaced portfolio-animation" data-columns="2">
+
+    {{- range .Pages }}
+      {{ .Render "lists" }}
+    {{- end }}
+
+  </div>
+  <!-- END .smart-scroll -->
+</section>
+<!-- PAGEBODY -->
+{{ partial "footer.html" . }}
