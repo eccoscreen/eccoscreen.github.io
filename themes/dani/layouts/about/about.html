@@ -47,35 +47,40 @@
 
     <div class="spacer-big"></div>
     
-    <div class="column-section clearfix">
+    {{ $urlPre := "https://api.airtable.com/v0/applMEf0jQu3dCY3O/Events?api_key=key8bgDGdN9tE2d6r" }}
+        
+    {{ $events := getJSON $urlPre }}
+
+    
+      
+        
+    
+    
+    <div class="column-section col-sticky clearfix">
       <h2>Exhibitions</h2>
       <h3>2017</h3>
       <br>
-      <div class="column one-third">
+      
+      {{ range first 9 $events.records }}
+      {{ with .fields }}
+      <div class="column one-fourth">
         <ul class="no-list-style">
           <li>
-          <h4>Tunnel Vision</h4>
-            <small>
-              July 1, 2017
-              <br>
-              Dupont Underground. Washington, DC
-            </small>
+            <h4>{{ .Event }}</h4>
+              <small>
+                {{ dateFormat "Jan 2, 2006" (.Date) }}
+                <br>
+                {{ .Venue }}. {{ .Location }}
+              </small>
           </li>
         </ul>
+        <br>
       </div>
-      <div class="column one-third">
-      <ul class="no-list-style">
-        <li>
-        <h4>Dimensions</h4>
-          <small>
-            June 3, 2017
-            <br>
-            Mirus Gallery. San Francisco, CA. US
-          </small>
-        </li>
-      </ul>
+      
+      {{ end }}
+      {{ end }}
     </div>
-    </div>
+    
     
     <div class="spacer-big"></div>
     <hr>
