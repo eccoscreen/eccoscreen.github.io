@@ -108,6 +108,9 @@ header #logo .text-logo {
 	line-height: 24px;
 	}
 
+/* Headers Spacing */
+div h1, div h2, div h3, div h4, div h5, div h6 { margin-top: 0px; }
+
 /*---------------------------------------------- 
 
 18. ANIMATIONS (portfolio, hero, text, ...)

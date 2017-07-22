@@ -51,36 +51,29 @@
         
     {{ $events := getJSON $urlPre }}
 
-    
-      
-        
-    
-    
     <div class="column-section col-sticky clearfix">
-      <h2>Exhibitions</h2>
+      <h1>Exhibitions</h1>
       <h3>2017</h3>
       <br>
       
-      {{ range first 9 $events.records }}
+      {{ range sort $events.records ".fields.Date" "desc" }}
       {{ with .fields }}
-      <div class="column one-fourth">
+      <div class="column one-third">
         <ul class="no-list-style">
           <li>
+            <small>{{ dateFormat "Jan 2, 2006" (.Date) }}</small>
             <h4>{{ .Event }}</h4>
-              <small>
-                {{ dateFormat "Jan 2, 2006" (.Date) }}
-                <br>
-                {{ .Venue }}. {{ .Location }}
-              </small>
+            <small>
+              {{ .Venue }} 
+              <br>{{ .Location }}
+            </small>
           </li>
         </ul>
         <br>
       </div>
-      
       {{ end }}
       {{ end }}
     </div>
-    
     
     <div class="spacer-big"></div>
     <hr>
